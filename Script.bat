@@ -263,7 +263,7 @@ output.txt
 GOTO END
 
 :Cat3Option8
-sysetminfo > output.txt
+systeminfo > output.txt
 output.txt
 GOTO END
 
