@@ -55,7 +55,8 @@ IF "%tool%"=="16" GOTO Cat1Option16
 
 :Cat1Option1
 echo Getting All Network Information...
-ipconfig /all
+ipconfig /all > output.txt
+output.txt
 GOTO END
 
 :Cat1Option2
@@ -91,7 +92,6 @@ GOTO END
 
 :Cat1Option7
 echo Outputing DNS Cache to command prompt and file
-ipconfig /displaydns
 ipconfig /displaydns > output.txt
 output.txt
 GOTO END
@@ -152,6 +152,7 @@ echo 2) Check System Files
 echo 3) Check Image
 echo 4) Repair Image
 echo 5) Format disk
+echo 6) Copy folder to a new location
 
 set /p "tool=Enter Tool #: "
 
@@ -160,6 +161,7 @@ IF "%tool%"=="2" GOTO Cat2Option2
 IF "%tool%"=="3" GOTO Cat2Option3
 IF "%tool%"=="4" GOTO Cat2Option4
 IF "%tool%"=="5" GOTO Cat2Option5
+IF "%tool%"=="6" GOTO Cat2Option6
 
 :Cat2Option1
 echo Checking Disk
@@ -180,7 +182,6 @@ DISM /Online /Cleanup-Image /RestoreHealth
 GOTO END
 
 :Cat2Option5
-
 ::List Disks
 echo list disk > ListDisk.txt
 echo exit >> ListDisk.txt
@@ -195,6 +196,13 @@ echo create partition primary >> FormatDisk.txt
 echo select part 1 >> FormatDisk.txt
 echo format fs=ntfs quick >> FormatDisk.txt
 diskpart /s FormatDisk.txt
+GOTO END
+
+:Cat2Option6
+set /p "s=Enter Source Directory: "
+set /p "d=Enter Destination Directory: "
+set /p "t=Enter Thread Count: "
+robocopy %s% %t% /mt:%t%
 GOTO END
 
 ::---------------------------------------
@@ -231,7 +239,8 @@ powercfg /batteryreport
 GOTO END
 
 :Cat3Option3
-assoc
+assoc > output.txt
+output.txt
 GOTO END
 
 :Cat3Option4
@@ -249,7 +258,8 @@ taskkill /f /pid %pid%
 GOTO END
 
 :Cat3Option7
-driverquery -v
+driverquery -v > output.txt
+output.txt
 GOTO END
 
 :Cat3Option8
