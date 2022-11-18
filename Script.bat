@@ -1,5 +1,7 @@
 @echo off
 
+:: Release
+
 :: Display Master Catagories
 echo Select Catagory
 echo 1) Network Tools
