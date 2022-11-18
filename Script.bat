@@ -39,22 +39,7 @@ echo 16) Retrieve Wi-Fi password
 
 set /p "tool=Enter Tool #: "
 
-IF "%tool%"=="1" GOTO Cat1Option1
-IF "%tool%"=="2" GOTO Cat1Option2
-IF "%tool%"=="3" GOTO Cat1Option3
-IF "%tool%"=="4" GOTO Cat1Option4
-IF "%tool%"=="5" GOTO Cat1Option5
-IF "%tool%"=="6" GOTO Cat1Option6
-IF "%tool%"=="7" GOTO Cat1Option7
-IF "%tool%"=="8" GOTO Cat1Option8
-IF "%tool%"=="9" GOTO Cat1Option9
-IF "%tool%"=="10" GOTO Cat1Option10
-IF "%tool%"=="11" GOTO Cat1Option11
-IF "%tool%"=="12" GOTO Cat1Option12
-IF "%tool%"=="13" GOTO Cat1Option13
-IF "%tool%"=="14" GOTO Cat1Option14
-IF "%tool%"=="15" GOTO Cat1Option15
-IF "%tool%"=="16" GOTO Cat1Option16
+GOTO Cat1Option%tool%
 
 :Cat1Option1
 echo Getting All Network Information...
@@ -159,12 +144,7 @@ echo 6) Copy folder to a new location
 
 set /p "tool=Enter Tool #: "
 
-IF "%tool%"=="1" GOTO Cat2Option1
-IF "%tool%"=="2" GOTO Cat2Option2
-IF "%tool%"=="3" GOTO Cat2Option3
-IF "%tool%"=="4" GOTO Cat2Option4
-IF "%tool%"=="5" GOTO Cat2Option5
-IF "%tool%"=="6" GOTO Cat2Option6
+GOTO Cat2Option%tool%
 
 :Cat2Option1
 echo Checking Disk
@@ -224,14 +204,7 @@ echo 8) Get system Info
 
 set /p "tool=Enter Tool #: "
 
-IF "%tool%"=="1" GOTO Cat3Option1
-IF "%tool%"=="2" GOTO Cat3Option2
-IF "%tool%"=="3" GOTO Cat3Option3
-IF "%tool%"=="4" GOTO Cat3Option4
-IF "%tool%"=="5" GOTO Cat3Option5
-IF "%tool%"=="6" GOTO Cat3Option6
-IF "%tool%"=="7" GOTO Cat3Option7
-IF "%tool%"=="8" GOTO Cat3Option8
+GOTO Cat3Option%tool%
 
 :Cat3Option1
 powercfg /energy
