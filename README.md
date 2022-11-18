@@ -39,8 +39,8 @@ This is the experimental branch. If you would like a tested release, please see 
 - Copy folder to a new location
 
 ### Other Utilities:
-- Check Power Usage
-- Check Battery
+- Check Power Usage (Opens in Web Browser)
+- Check Battery (Opens in Web Browser)
 - See File Assosiations (Displays in text file)
 - Restart to BIOS
 - List all running taks (Displays in text file)

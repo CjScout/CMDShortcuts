@@ -232,10 +232,12 @@ IF "%tool%"=="8" GOTO Cat3Option8
 
 :Cat3Option1
 powercfg /energy
+C:\Windows\system32\energy-report.html
 GOTO END
 
 :Cat3Option2
 powercfg /batteryreport
+C:\Windows\system32\battery-report.html
 GOTO END
 
 :Cat3Option3
