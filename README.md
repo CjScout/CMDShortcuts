@@ -10,10 +10,7 @@ Note: All outputs go to command line unless otherwise noted, in which case they 
 
 This is the main branch that all releases are based on. If you would like to test experimential features, please see the experimental branch. Once features have been tested they will be added to this branch.
 
-## Catagories:
-- Network Tools
-- Disk Tools
-- Other Utilities
+## Features
 
 ### Network Tools:
 - Display All Network Information (Displays in text file)
