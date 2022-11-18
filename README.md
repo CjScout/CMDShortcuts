@@ -6,6 +6,10 @@ The script is divided into 3 master catagories with each function under one of t
 
 Note: All outputs go to command line unless otherwise noted, in which case they will be stored in a file called output.txt in the System32 folder.
 
+## Repository Structure
+
+This is the main branch that all releases are based on. If you would like to test experimential features, please see the experimental branch. Once features have been tested they will be added to this branch.
+
 ## Catagories:
 - Network Tools
 - Disk Tools
