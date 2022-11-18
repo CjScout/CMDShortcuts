@@ -3,6 +3,7 @@
 :: Experimental
 
 :: Display Master Catagories
+echo This is an experimental build, things will not work here.
 echo Select Catagory
 echo 1) Network Tools
 echo 2) Disk Tools
