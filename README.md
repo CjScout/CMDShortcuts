@@ -6,10 +6,11 @@ The script is divided into 3 master catagories with each function under one of t
 
 Note: All outputs go to command line unless otherwise noted, in which case they will be stored in a file called output.txt in the System32 folder.
 
-## Catagories:
-- Network Tools
-- Disk Tools
-- Other Utilities
+## Repository Structure
+
+This is the experimental branch. If you would like a tested release, please see the main branch. Once features have been tested here they will be added to the main branch.
+
+## Features
 
 ### Network Tools:
 - Display All Network Information (Displays in text file)
