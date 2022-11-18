@@ -8,7 +8,7 @@ Note: All outputs go to command line unless otherwise noted, in which case they 
 
 ## Repository Structure
 
-This is the experimental branch. If you would like a tested release, please see the main branch. Once features have been tested here they will be added to the main branch.
+This is the experimental branch. If you would like a tested release, please see the Release branch. Once features have been tested here they will be added to the Release branch.
 
 ## Features
 
