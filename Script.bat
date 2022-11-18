@@ -8,12 +8,11 @@ echo Select Catagory
 echo 1) Network Tools
 echo 2) Disk Tools
 echo 3) Other Utilities
+echo 4) Exit
 
 set /p "catagory=Enter Catagory #: "
 
-IF "%catagory%"=="1" GOTO Cat1
-IF "%catagory%"=="2" GOTO Cat2
-IF "%catagory%"=="3" GOTO Cat3
+GOTO Cat%catagory%
 
 ::---------------------------------------
 :Cat1
@@ -246,5 +245,6 @@ output.txt
 GOTO END
 
 ::---------------------------------------
+:Cat4
 :END
 pause
