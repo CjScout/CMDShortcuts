@@ -3,6 +3,8 @@
 :: Experimental
 
 :: Display Master Catagories
+:Start
+cls
 echo This is an experimental build, things will not work here.
 echo Select Catagory
 echo 1) Network Tools
@@ -16,6 +18,7 @@ GOTO Cat%catagory%
 
 ::---------------------------------------
 :Cat1
+cls
 :: Display Options
 
 echo Network Tools: Select Tool
@@ -35,6 +38,7 @@ echo 13) Ping IP
 echo 14) non-stop ping ip
 echo 15) Create and open a file that lists all active connections
 echo 16) Retrieve Wi-Fi password
+echo 00) Return to top menu
 
 set /p "tool=Enter Tool #: "
 
@@ -129,8 +133,12 @@ set /p "network=Enter Network Name (Use quotes if space): "
 netsh wlan show profile name=%network% key=clear | findstr Key
 GOTO END
 
+:Cat1Option00
+GOTO Start
+
 ::---------------------------------------
 :Cat2
+cls
 :: Display Options
 
 echo Disk Tools: Select Tool
@@ -140,6 +148,7 @@ echo 3) Check Image
 echo 4) Repair Image
 echo 5) Format disk
 echo 6) Copy folder to a new location
+echo 00) Return to top menu
 
 set /p "tool=Enter Tool #: "
 
@@ -187,8 +196,12 @@ set /p "t=Enter Thread Count: "
 robocopy %s% %t% /mt:%t%
 GOTO END
 
+:Cat2Option00
+GOTO Start
+
 ::---------------------------------------
 :Cat3
+cls
 :: Display Options
 
 echo Orher Utilities: Select Tool
@@ -199,7 +212,8 @@ echo 4) Restart to BIOS
 echo 5) List all running taks
 echo 6) Kill A Task
 echo 7) See all drivers
-echo 8) Get system Info
+echo 8) Get system info
+echo 00) Return to top menu
 
 set /p "tool=Enter Tool #: "
 
@@ -244,7 +258,13 @@ systeminfo > output.txt
 output.txt
 GOTO END
 
+:Cat3Option00
+GOTO Start
+
 ::---------------------------------------
 :Cat4
 :END
+set /p "again=Run again? (Y/n) "
+if "%again%"=="Y" GOTO Start
+if "%again%"=="y" GOTO Start 
 pause
