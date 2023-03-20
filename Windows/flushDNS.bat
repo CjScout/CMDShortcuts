@@ -1,0 +1,3 @@
+echo Flushing DNS Cache...
+ipconfig /flushdns
+pause

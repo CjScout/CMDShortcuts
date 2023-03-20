@@ -1,0 +1,3 @@
+echo Getting All Network Information...
+ipconfig /all
+pause
